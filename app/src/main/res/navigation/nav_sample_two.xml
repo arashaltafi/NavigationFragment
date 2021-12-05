@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/match">
+
+    <fragment
+        android:id="@+id/gameOver"
+        android:name="com.arash.altafi.navigationfragment.sample2.GameOver"
+        android:label="fragment_game_over"
+        tools:layout="@layout/fragment_game_over">
+        <action
+            android:id="@+id/action_gameOver_to_match"
+            app:destination="@id/match"
+            app:popUpTo="@id/match"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/inGame"
+        android:name="com.arash.altafi.navigationfragment.sample2.InGame"
+        android:label="fragment_in_game"
+        tools:layout="@layout/fragment_in_game">
+        <action
+            android:id="@+id/action_inGame_to_gameOver"
+            app:destination="@id/gameOver"
+            app:popUpTo="@id/match"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_inGame_to_resultsWinner"
+            app:destination="@id/resultsWinner"
+            app:popUpTo="@id/match"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsWinner"
+        android:name="com.arash.altafi.navigationfragment.sample2.ResultsWinner"
+        android:label="fragment_results_winner"
+        tools:layout="@layout/fragment_results_winner">
+        <action
+            android:id="@+id/action_resultsWinner_to_match"
+            app:destination="@id/match"
+            app:popUpTo="@id/match"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/match"
+        android:name="com.arash.altafi.navigationfragment.sample2.Match"
+        android:label="fragment_match"
+        tools:layout="@layout/fragment_match">
+        <action
+            android:id="@+id/action_match_to_inGame"
+            app:destination="@id/inGame" />
+        <action
+            android:id="@+id/action_match_to_navigation"
+            app:destination="@id/navigation" />
+    </fragment>
+
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/titleScreen">
+        <fragment
+            android:id="@+id/register"
+            android:name="com.arash.altafi.navigationfragment.sample2.Register"
+            android:label="fragment_register"
+            tools:layout="@layout/fragment_register">
+            <action
+                android:id="@+id/action_register_to_match"
+                app:destination="@id/match"
+                app:popUpTo="@id/match"
+                app:popUpToInclusive="true" />
+        </fragment>
+        <fragment
+            android:id="@+id/titleScreen"
+            android:name="com.arash.altafi.navigationfragment.sample2.TitleScreen"
+            android:label="fragment_title_screen"
+            tools:layout="@layout/fragment_title_screen">
+            <action
+                android:id="@+id/action_titleScreen_to_register"
+                app:destination="@id/register" />
+        </fragment>
+    </navigation>
+
+</navigation>
