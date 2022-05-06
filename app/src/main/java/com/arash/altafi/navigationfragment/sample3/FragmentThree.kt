@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.arash.altafi.navigationfragment.R
 import com.google.android.material.button.MaterialButton
 

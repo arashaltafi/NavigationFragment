@@ -1,4 +1,4 @@
-package com.arash.altafi.navigationfragment.sapmle1
+package com.arash.altafi.navigationfragment.sample1
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment.findNavController
 import com.arash.altafi.navigationfragment.R
 import com.google.android.material.button.MaterialButton
 

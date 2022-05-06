@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/fragmentOne"
-        android:name="com.arash.altafi.navigationfragment.sapmle1.FragmentOne"
+        android:name="com.arash.altafi.navigationfragment.sample1.FragmentOne"
         android:label="FragmentOne" >
         <action
             android:id="@+id/action_fragmentOne_to_fragmentTwo"
@@ -14,6 +14,6 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentTwo"
-        android:name="com.arash.altafi.navigationfragment.sapmle1.FragmentTwo"
+        android:name="com.arash.altafi.navigationfragment.sample1.FragmentTwo"
         android:label="FragmentTwo" />
 </navigation>

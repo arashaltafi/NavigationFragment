@@ -5,7 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.arash.altafi.navigationfragment.sample2.SampleTwo
 import com.arash.altafi.navigationfragment.sample3.SampleThree
-import com.arash.altafi.navigationfragment.sapmle1.SampleOne
+import com.arash.altafi.navigationfragment.sample1.SampleOne
+import com.arash.altafi.navigationfragment.sample4.SampleFour
 import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnOne : MaterialButton
     private lateinit var btnTwo : MaterialButton
     private lateinit var btnThree : MaterialButton
+    private lateinit var btnFour : MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +34,8 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this , SampleTwo::class.java))
         }
 
-        btnThree.setOnClickListener {
-            startActivity(Intent(this , SampleThree::class.java))
+        btnFour.setOnClickListener {
+            startActivity(Intent(this , SampleFour::class.java))
         }
 
     }
@@ -42,6 +44,7 @@ class MainActivity : AppCompatActivity() {
         btnOne = findViewById(R.id.btn_one)
         btnTwo = findViewById(R.id.btn_two)
         btnThree = findViewById(R.id.btn_three)
+        btnFour = findViewById(R.id.btn_four)
     }
 
 }

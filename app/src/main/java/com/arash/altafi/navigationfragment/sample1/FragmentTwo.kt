@@ -1,4 +1,4 @@
-package com.arash.altafi.navigationfragment.sapmle1
+package com.arash.altafi.navigationfragment.sample1
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
