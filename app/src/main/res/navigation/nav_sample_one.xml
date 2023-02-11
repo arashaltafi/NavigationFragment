@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_sample_one"
     app:startDestination="@id/fragmentOne">
 
     <fragment
         android:id="@+id/fragmentOne"
         android:name="com.arash.altafi.navigationfragment.sample1.FragmentOne"
-        android:label="FragmentOne" >
+        android:label="FragmentOne">
         <action
             android:id="@+id/action_fragmentOne_to_fragmentTwo"
             app:destination="@id/fragmentTwo" />
@@ -15,5 +16,13 @@
     <fragment
         android:id="@+id/fragmentTwo"
         android:name="com.arash.altafi.navigationfragment.sample1.FragmentTwo"
-        android:label="FragmentTwo" />
+        android:label="FragmentTwo">
+
+        <deepLink
+            android:id="@+id/deepLink1"
+            android:autoVerify="true"
+            app:uri="https://arashaltafi.ir/resume.html"
+            tools:targetApi="m" />
+
+    </fragment>
 </navigation>
