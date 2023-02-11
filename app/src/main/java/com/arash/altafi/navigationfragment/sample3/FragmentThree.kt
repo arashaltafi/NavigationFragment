@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.arash.altafi.navigationfragment.R
 import com.google.android.material.button.MaterialButton
 
@@ -28,7 +29,7 @@ class FragmentThree : Fragment() {
         btnIntent2 = view.findViewById(R.id.btn_submit2)
 
         btnIntent1.setOnClickListener {
-            val bundle : Bundle = Bundle()
+            val bundle = Bundle()
             bundle.putString("name" , edtName.text.toString())
             Navigation.findNavController(requireView()).navigate(R.id.action_fragmentThree_to_fragmentFour , bundle)
         }
@@ -37,6 +38,13 @@ class FragmentThree : Fragment() {
             Navigation.findNavController(it).navigate(FragmentThreeDirections.actionFragmentThreeToFragmentFour(edtName.text.toString()))
         }
 
+        if (requireActivity().intent.getStringExtra("deepLink") == "works") {
+            findNavController().navigate(
+                FragmentThreeDirections.actionFragmentThreeToFragmentFour(
+                    "test deeplink"
+                )
+            )
+        }
     }
 
 }

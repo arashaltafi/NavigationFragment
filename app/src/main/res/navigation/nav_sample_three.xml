@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_sample_three"
     app:startDestination="@id/fragmentThree">
     <fragment
@@ -23,5 +24,13 @@
         <argument
             android:name="name"
             app:argType="string" />
+
+        <deepLink
+            android:id="@+id/deepLink2"
+            android:autoVerify="true"
+            app:uri="https://arashaltafi.ir/works.html?name={name}"
+            tools:targetApi="m" />
+
+
     </fragment>
 </navigation>

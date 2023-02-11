@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.arash.altafi.navigationfragment.sample1.SampleOne
 import com.arash.altafi.navigationfragment.sample2.SampleTwo
+import com.arash.altafi.navigationfragment.sample3.SampleThree
 import com.arash.altafi.navigationfragment.sample4.SampleFour
 import com.google.android.material.button.MaterialButton
 
@@ -30,6 +31,12 @@ class MainActivity : AppCompatActivity() {
                     "/resume.html" -> {
                         val intent = Intent(this, SampleOne::class.java).apply {
                             putExtra("deepLink", "resume")
+                        }
+                        startActivity(intent)
+                    }
+                    "/works.html" -> {
+                        val intent = Intent(this, SampleThree::class.java).apply {
+                            putExtra("deepLink", "works")
                         }
                         startActivity(intent)
                     }
